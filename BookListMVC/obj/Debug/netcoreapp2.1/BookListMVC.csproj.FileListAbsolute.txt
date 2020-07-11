@@ -30,3 +30,5 @@ C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Deb
 C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Debug\netcoreapp2.1\BookListMVC.dll
 C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Debug\netcoreapp2.1\BookListMVC.pdb
 C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Debug\netcoreapp2.1\BookListMVC.csproj.CopyComplete
+C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Debug\netcoreapp2.1\Razor\Views\Books\Index.g.cshtml.cs
+C:\Users\ery_c\Desktop\Programacao\C#\ASPNETCORE\BookListMVC\BookListMVC\obj\Debug\netcoreapp2.1\Razor\Views\Books\Upsert.g.cshtml.cs
