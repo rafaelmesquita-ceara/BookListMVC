@@ -26,6 +26,7 @@ No desenvolvimento do BookListMVC alguns conceitos foram colocados em prática:
  	- Sistema de roteamento
 	- Requisições para a API (monolítica)
 	- Razor Pages
+	- Utilização de AJAX para páginas dinâmicas
 
  - Frameworks de Web Design
  	- Data Tables (para criar tabelas interativas)
