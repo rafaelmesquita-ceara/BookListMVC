@@ -7,7 +7,7 @@ $(document).ready(function () {
 function loadDataTable() {
     dataTable = $('#DT_load').DataTable({
         "ajax": {
-            "url": "/books/Getall/",
+            "url": "/books/getall/",
             "type": "GET",
             "datatype": "json"
         },
@@ -20,19 +20,19 @@ function loadDataTable() {
                 "render": function (data) {
                     return `<div class="text-center">
                         <a href="/Books/Upsert?id=${data}" class='btn btn-success text-white' style='cursor:pointer; width:70px;'>
-                            Editar
+                            Edit
                         </a>
                         &nbsp;
                         <a class='btn btn-danger text-white' style='cursor:pointer; width:70px;'
                             onclick=Delete('/books/Delete?id='+${data})>
-                            Deletar
+                            Delete
                         </a>
                         </div>`;
                 }, "width": "40%"
             }
         ],
         "language": {
-            "emptyTable": "nenhum resultado encontrado"
+            "emptyTable": "no data found"
         },
         "width": "100%"
     });
@@ -40,8 +40,8 @@ function loadDataTable() {
 
 function Delete(url) {
     swal({
-        title: "Você tem certeza?",
-        text: "Depois de deletado, não há como recuperar o registro",
+        title: "Tem certeza?",
+        text: "Depois de deletado, o registro não poderá ser recuperado",
         icon: "warning",
         buttons: true,
         dangerMode: true

@@ -14,6 +14,8 @@ namespace BookListMVC.Models
             optionsBuilder.UseSqlite("Filename=Database.db");
 
         }
+        public DbSet<User> Users { get; set; }
         public DbSet<Book> Books { get; set; }
+        
     }
 }
