@@ -1,6 +1,6 @@
 # Sobre o BookListMVC
 
-O BookListMVC é um simples gerenciador de livros feito em **ASP.NET CORE 2.1** utilizando o **Entity Framework** como ORM, o projeto foi feito para fins de aprendizado. Conceitos como requisições a API, Razor Pages, validações com base no modelo, padrão de CodeFirst, Ajax, Frameworks de webdesign e SQLite foram aplicados de forma prática nesta solução.
+O BookListMVC é um simples gerenciador de livros feito em **ASP.NET CORE 2.1** utilizando o **Entity Framework** como ORM, o projeto foi feito para fins de aprendizado. Conceitos como requisições a API, Razor Pages, validações com base no modelo, padrão de CodeFirst, Ajax, Frameworks de webdesign e SQL Server foram aplicados de forma prática nesta solução.
 
 <img src="https://user-images.githubusercontent.com/62113721/87341672-686fbc80-c520-11ea-937a-b87459a3f524.gif" 
 width="95%" height="614px"
