@@ -47,7 +47,7 @@ namespace BookListMVC.Controllers
             else // Caso não tenha, irei mandar um sinal de falha para uma caixa vermelha aparecer informando que as credenciais estao erradas
             {
                 ViewBag.Msg = "fail";
-                return View("Index");   // Retorno o Index, que no caso seria a pagina inicial do BookListMVC
+                return RedirectToAction("Index", "Home", new { area = "" }); ;   // Retorno o Index, que no caso seria a pagina inicial do BookListMVC
 
             }
         }
@@ -56,11 +56,15 @@ namespace BookListMVC.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Create()
         {
-            //create
-            _db.Users.Add(User);        // Adiciono meu User passado pelo formulario da pagina de cadastro ao banco de dados
-            _db.SaveChanges();          // Salvo as alteracoes
-            HttpContext.Session.SetString("SessionUser", JsonConvert.SerializeObject(User));   // Forneço meu usuario para uma string da sessão, que seria a SessionUser 
-            return RedirectToAction("Index", "Books", new { area = "" });   // Redireciono para a Lista de livros
+            if (ModelState.IsValid) // Valido meus dados com base no modelo
+            {
+                //create
+                _db.Users.Add(User);        // Adiciono meu User passado pelo formulario da pagina de cadastro ao banco de dados
+                _db.SaveChanges();          // Salvo as alteracoes
+                HttpContext.Session.SetString("SessionUser", JsonConvert.SerializeObject(User));   // Forneço meu usuario para uma string da sessão, que seria a SessionUser 
+                return RedirectToAction("Index", "Books", new { area = "" });   // Redireciono para a Lista de livros
+            }
+            return View("Create");
         }
 
         [HttpGet]   // Rota padrao (/) no metodo GET

@@ -18,12 +18,16 @@
         <form method="post">
             <h1>Faça seu cadastro</h1>
             <input type="text" placeholder="Seu nome completo" asp-for="CH_Name" />
+            <span asp-validation-for="CH_Name" class="text-danger"></span>
 
             <input type="text" placeholder="Seu nome de usuário" asp-for="CH_Login" />
+            <span asp-validation-for="CH_Login" class="text-danger"></span>
 
             <input type="password" placeholder="Sua senha" asp-for="CH_Password" />
+            <span asp-validation-for="CH_Password" class="text-danger"></span>
 
             <input type="number" placeholder="Sua idade" asp-for="VL_Age" />
+            <span asp-validation-for="VL_Age" class="text-danger"></span>
 
             <button type="submit" class="button">Cadastrar</button>
 
