@@ -2,26 +2,34 @@
 
 O BookListMVC é um simples gerenciador de livros feito em **ASP.NET CORE 2.1** utilizando o **Entity Framework** como ORM, o projeto foi feito para fins de aprendizado. Conceitos como requisições a API, Razor Pages, validações com base no modelo, padrão de CodeFirst, Ajax, Frameworks de webdesign e SQLite foram aplicados de forma prática nesta solução.
 
-<img src="https://user-images.githubusercontent.com/62113721/87240688-2fd1c500-c3f2-11ea-9956-a804738eef91.gif" 
+<img src="https://user-images.githubusercontent.com/62113721/87341672-686fbc80-c520-11ea-937a-b87459a3f524.gif" 
 width="95%" height="614px"
 /> 
 
 # Entidades
 O note_app consiste em uma entidade de livros, onde possui a seguinte estrutura:
 
- - NoteSet
+ - Books
 	 - iD : Chave primária da entidade (int)
 	 - Name: Nome do livro (string)
 	 - Author: Autor do livro (string)
-	 - ISBN: Sistema internacional de identificação de livros (DateTime)
+	 - ISBN: Sistema internacional de identificação de livros (int)
+  - Users
+	 - iD : Chave primária da entidade (int)
+	 - CH_Name : Nome do usuario (string)
+	 - CH_Login : Login do usuario (string)
+	 - CH_Password : Senha do usuario (string)
+	 - VL_Age  : Idade do usuario (int)
 
 # Funções
-O BookListMVC consiste em 4 funções, atendendo ao CRUD:
+O BookListMVC consiste em algumas funções, atendendo ao CRUD:
 
  - Adicionar novo livro
  - Listar livros
  - Editar livro específico
  - Remover livro específico
+ - Cadastrar usuario
+ - Logar com usuario cadastrado iniciando uma sessão
 
 # Conceitos aplicados
 No desenvolvimento do BookListMVC alguns conceitos foram colocados em prática:
@@ -38,18 +46,19 @@ No desenvolvimento do BookListMVC alguns conceitos foram colocados em prática:
 	- Toastr (Notificações Toast que mostram mensagens de sucesso ou erro vindas da api para o usuário)
 	- Bootstrap (Biblioteca Html/CSS e Javascript para criação de layouts responsivos)
  - Entity Framework code-first)
- - Conexão ao banco de dados utilizando SQLITE (arquivo Database.db)
+ - Migrations para gerar o banco de dados
+ - Conexão ao banco de dados utilizando SQL SERVER
  - Conceito MVC
  	- Models de entidade (Pasta Models)
 	- Views de entidade (Pasta Views)
  	- Controladores de entidade (Pasta Controls)
  - CRUD utilizando um ORM (Entity Framework)
 
-<img src="https://user-images.githubusercontent.com/62113721/87240683-28122080-c3f2-11ea-925b-c18034e2584d.gif" 
+<img src="https://user-images.githubusercontent.com/62113721/87341691-6f96ca80-c520-11ea-81d0-1b3d04b004f4.gif" 
 width="95%" height="614px"
 /> 
 
-<img src="https://user-images.githubusercontent.com/62113721/87240677-16c91400-c3f2-11ea-9116-c8ea2f6f86cd.gif" 
+<img src="https://user-images.githubusercontent.com/62113721/87341932-c2708200-c520-11ea-9def-faa8dff09ad4.gif" 
 width="95%" height="614px"
 /> 
 
