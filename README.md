@@ -2,6 +2,10 @@
 
 O BookListMVC é um simples gerenciador de livros feito em **ASP.NET CORE 2.1** utilizando o **Entity Framework** como ORM, o projeto foi feito para fins de aprendizado. Conceitos como requisições a API, Razor Pages, validações com base no modelo, padrão de CodeFirst, Ajax, Frameworks de webdesign e SQLite foram aplicados de forma prática nesta solução.
 
+<img src="https://user-images.githubusercontent.com/62113721/87240688-2fd1c500-c3f2-11ea-9956-a804738eef91.gif" 
+width="95%" height="614px"
+/> 
+
 # Entidades
 O note_app consiste em uma entidade de livros, onde possui a seguinte estrutura:
 
@@ -41,4 +45,11 @@ No desenvolvimento do BookListMVC alguns conceitos foram colocados em prática:
  	- Controladores de entidade (Pasta Controls)
  - CRUD utilizando um ORM (Entity Framework)
 
+<img src="https://user-images.githubusercontent.com/62113721/87240683-28122080-c3f2-11ea-925b-c18034e2584d.gif" 
+width="95%" height="614px"
+/> 
+
+<img src="https://user-images.githubusercontent.com/62113721/87240677-16c91400-c3f2-11ea-9116-c8ea2f6f86cd.gif" 
+width="95%" height="614px"
+/> 
 
