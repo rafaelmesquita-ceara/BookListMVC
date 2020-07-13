@@ -5,11 +5,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BookListMVC.Models;
+using Microsoft.AspNetCore.Http;
+using Newtonsoft.Json;
 
 namespace BookListMVC.Controllers
 {
     public class HomeController : Controller
     {
+        // Aqui estou passando meu DbContext aqui para ser utilizado por todo o meu controller quando precisar
         private readonly ApplicationDbContext _db;
         [BindProperty]
         public User User { get; set; }
@@ -20,49 +23,19 @@ namespace BookListMVC.Controllers
 
         public IActionResult Index(int? id)
         {
-            return View();
-        }
-
-        #region API CALLS
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Index()
-        {
-            var query = _db.Users
-                       .Where(s => s.CH_Login == User.CH_Login && s.CH_Password == User.CH_Password)
-                       .FirstOrDefault();
-
-            if (query != null)
+            if (HttpContext.Session.GetString("SessionUser") == null) // Verifico se existe um usuario na minha sessão
             {
-                ViewBag.Msg = "success";
-                return RedirectToAction("Index", "Books", new { area = "" });
+                return View();  // Se não existir, redireciono para o index (tela de login)
             }
-            else
-            {
-                ViewBag.Msg = "fail";
-                return View("Index");
+            return RedirectToAction("Index", "Books", new { area = "" });
 
-            }
         }
-        #endregion
 
 
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             return View();
         }
 

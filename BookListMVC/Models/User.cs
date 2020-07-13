@@ -10,10 +10,13 @@ namespace BookListMVC.Models
     {
         [Key]
         public int Id { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public string CH_Name { get; set; }
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public string CH_Login { get; set; }
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public string CH_Password { get; set; }
+        [Required(ErrorMessage = "Este campo é obrigatório")]
         public int VL_Age { get; set; }
 
     }

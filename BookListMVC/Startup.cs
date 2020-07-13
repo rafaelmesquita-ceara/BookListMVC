@@ -20,11 +20,6 @@ namespace BookListMVC
         {
             Configuration = configuration;
 
-            using (var client = new ApplicationDbContext())
-            {
-                client.Database.EnsureCreated();
-            }
-
         }
 
         public IConfiguration Configuration { get; }
@@ -39,7 +34,9 @@ namespace BookListMVC
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddSession(o => {  // Irei trabalhar com sessoes para autenticacao de usuarios
+                o.IdleTimeout = TimeSpan.FromSeconds(1800);
+                });
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddEntityFrameworkSqlite().AddDbContext<ApplicationDbContext>();
@@ -61,7 +58,7 @@ namespace BookListMVC
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
-
+            app.UseSession();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

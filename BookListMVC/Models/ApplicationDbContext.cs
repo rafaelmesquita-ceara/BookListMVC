@@ -11,7 +11,7 @@ namespace BookListMVC.Models
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=Database.db");
+            optionsBuilder.UseSqlServer("Password=Ericsouza.123;Persist Security Info=True;User ID=rafael;Initial Catalog=booklistmvc;Data Source=rafaelmb.database.windows.net");
 
         }
         public DbSet<User> Users { get; set; }
